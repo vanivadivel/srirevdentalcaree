@@ -7,7 +7,7 @@
     <meta name="description" content="SRI REV DENTAL CARE - Premium dental clinic located in Velur, Tamil Nadu. We offer comprehensive dental care, cosmetic dentistry, and more. Call 08667278466.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&family=Tiro+Tamil:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -39,50 +39,43 @@
             color: var(--text-dark);
             line-height: 1.6;
             overflow-x: hidden;
-            transition: font-family 0.3s ease;
         }
 
-        body.ta-active {
-            font-family: 'Mukta Malar', 'Outfit', sans-serif;
-        }
-
-        /* Typography */
         h1, h2, h3, h4 {
             color: var(--primary-color);
             font-weight: 700;
         }
 
         h1 {
-            font-size: clamp(2rem, 5vw, 4rem);
-            line-height: 1.2;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
             margin-bottom: 1.5rem;
         }
 
         h2 {
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-size: clamp(2rem, 3vw, 2.5rem);
             margin-bottom: 1rem;
         }
 
         p {
             color: var(--text-light);
-            font-size: clamp(1rem, 2vw, 1.1rem);
+            font-size: 1.1rem;
             margin-bottom: 1.5rem;
         }
 
-        /* Buttons */
         .btn {
             display: inline-flex;
-            justify-content: center;
             align-items: center;
-            padding: 12px 25px;
+            justify-content: center;
+            padding: 12px 30px;
             border-radius: 50px;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 1.1rem;
             text-decoration: none;
             transition: var(--transition);
             cursor: pointer;
             border: 2px solid transparent;
-            text-align: center;
+            gap: 8px;
         }
 
         .btn-primary {
@@ -110,7 +103,6 @@
             transform: translateY(-3px);
         }
 
-        /* Header / Navbar */
         header {
             position: fixed;
             top: 0;
@@ -129,41 +121,44 @@
         }
 
         .logo {
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            z-index: 1001;
-        }
-
-        .logo i {
-            color: var(--secondary-color);
-            font-size: 1.5rem;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 800;
             color: var(--primary-color);
             text-decoration: none;
             display: flex;
             align-items: center;
             gap: 10px;
+            white-space: nowrap;
+            z-index: 1001;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+            /* Animated Gradient Text */
+            background: linear-gradient(270deg, var(--primary-color), var(--secondary-color), #115d8a, var(--primary-color));
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textGradient 6s ease infinite;
+        }
+
+        @keyframes textGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .logo i {
             color: var(--secondary-color);
             font-size: 1.8rem;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
         }
 
         .nav-links {
@@ -200,68 +195,78 @@
             color: var(--secondary-color);
         }
 
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            z-index: 1001;
+        }
+
         .contact-btn {
             background-color: var(--primary-color);
             color: var(--white);
-            padding: 10px 20px;
+            padding: 10px 25px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
             transition: var(--transition);
             display: flex;
             align-items: center;
             gap: 8px;
+            white-space: nowrap;
         }
 
         .contact-btn:hover {
             background-color: var(--secondary-color);
             transform: scale(1.05);
-        }
-
-        /* Language & Header Controls */
-        .header-controls {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            z-index: 1001;
-        }
-
-        .lang-toggle {
-            background: transparent;
-            border: 2px solid var(--primary-color);
-            color: var(--primary-color);
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.9rem;
-            transition: var(--transition);
-            font-family: 'Outfit', sans-serif;
-        }
-
-        .lang-toggle:hover {
-            background: var(--primary-color);
             color: var(--white);
         }
 
-        /* Mobile Menu Toggle */
+        .mobile-only-btn {
+            display: none;
+        }
+
+        .lang-toggle {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            background: var(--bg-light);
+            padding: 4px;
+            border-radius: 30px;
+        }
+
+        .lang-toggle button {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-weight: 600;
+            cursor: pointer;
+            padding: 6px 14px;
+            border-radius: 20px;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .lang-toggle button.active {
+            background: var(--white);
+            color: var(--primary-color);
+            box-shadow: var(--shadow);
+        }
+
         .mobile-menu-btn {
             display: none;
             background: none;
             border: none;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: var(--primary-color);
             cursor: pointer;
-            z-index: 1001;
+            transition: var(--transition);
+            width: 30px;
+            text-align: center;
         }
 
-        /* Container */
         section {
-            padding: 80px 5%;
+            padding: 100px 5%;
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -292,14 +297,13 @@
             border-radius: 2px;
         }
 
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 3rem;
-            padding-top: 100px;
+            gap: 4rem;
+            padding-top: 120px;
             position: relative;
         }
 
@@ -328,8 +332,8 @@
             color: var(--secondary-color);
             border-radius: 50px;
             font-weight: 600;
-            font-size: 0.85rem;
-            margin-bottom: 1.2rem;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
@@ -348,18 +352,51 @@
             align-items: center;
             position: relative;
             animation: slideInRight 1s ease forwards;
+            min-height: 450px;
+            width: 100%;
+        }
+
+        .blob-container {
+            position: relative;
+            width: 100%;
+            max-width: 550px;
+            height: 100%;
+            min-height: 450px;
         }
 
         .image-blob {
-            position: relative;
-            width: 100%;
-            max-width: 500px;
+            position: absolute;
             aspect-ratio: 1;
             border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
             overflow: hidden;
             box-shadow: var(--shadow);
-            border: 8px solid var(--white);
+            border: 6px solid var(--white);
             animation: blobShape 8s ease-in-out infinite;
+        }
+
+        .blob-1 {
+            width: 65%;
+            top: 0;
+            right: 0;
+            z-index: 2;
+        }
+
+        .blob-2 {
+            width: 45%;
+            bottom: 5%;
+            left: 5%;
+            z-index: 3;
+            animation-delay: -2s;
+            animation-duration: 9.5s;
+        }
+
+        .blob-3 {
+            width: 35%;
+            top: 20%;
+            left: -5%;
+            z-index: 1;
+            animation-delay: -4.5s;
+            animation-duration: 11s;
         }
 
         .image-blob img {
@@ -368,15 +405,14 @@
             object-fit: cover;
         }
 
-        /* Services Section */
         .services {
             background-color: var(--white);
             border-radius: 40px;
-            margin-top: -30px;
+            margin-top: -50px;
             position: relative;
             z-index: 10;
             box-shadow: 0 -10px 40px rgba(0,0,0,0.03);
-            padding-top: 60px;
+            padding-top: 80px;
         }
 
         .services-grid {
@@ -463,7 +499,7 @@
 
         .services-banner-content h3 {
             color: var(--white);
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 20px;
         }
 
@@ -484,7 +520,6 @@
             font-size: 1.2rem;
         }
 
-        /* Contact Section */
         .contact {
             background-color: var(--bg-light);
             padding-bottom: 120px;
@@ -544,6 +579,7 @@
             margin-bottom: 0;
             font-size: 1rem;
             text-decoration: none;
+            transition: var(--transition);
         }
 
         .info-card a:hover {
@@ -561,6 +597,7 @@
             left: 0;
             width: 100%;
             height: 100%;
+            border: 0;
         }
 
         /* Footer */
@@ -577,7 +614,6 @@
             font-size: 1rem;
         }
 
-        /* Animations */
         @keyframes slideInLeft {
             from { opacity: 0; transform: translateX(-50px); }
             to { opacity: 1; transform: translateX(0); }
@@ -594,12 +630,31 @@
             100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
         }
 
+        /* Tamil Font Overrides */
+        body.lang-ta {
+            font-family: 'Mukta Malar', sans-serif;
+        }
+
+        body.lang-ta h1, 
+        body.lang-ta h2, 
+        body.lang-ta h3, 
+        body.lang-ta h4 {
+            font-family: 'Mukta Malar', sans-serif;
+            font-weight: 700;
+        }
+
+        body.lang-ta .logo-text {
+            font-family: 'Tiro Tamil', serif;
+            letter-spacing: 0px; /* Reset letter spacing for better Tamil rendering */
+            font-size: 1.5rem; /* Adjust sizing slightly for Tamil script */
+        }
+
         /* Responsive Design */
-        @media (max-width: 992px) {
+        @media (max-width: 1024px) {
             .hero {
-                flex-direction: column-reverse;
+                flex-direction: column;
                 text-align: center;
-                padding-top: 120px;
+                padding-top: 150px;
             }
             .hero-content {
                 margin: 0 auto;
@@ -607,194 +662,164 @@
             .hero-btns {
                 justify-content: center;
             }
+            .hero-image-wrapper {
+                min-height: 400px;
+                margin-top: 2rem;
+            }
+            .blob-container {
+                min-height: 400px;
+                max-width: 450px;
+            }
             .services-banner, .contact-wrapper {
                 flex-direction: column;
             }
             .services-banner-img {
                 min-height: 250px;
             }
-            .services-banner-content {
-                padding: 30px;
-            }
             .map-container {
-                min-height: 350px;
+                min-height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 12px 5%;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .desktop-contact {
+                display: none;
+            }
+            .mobile-only-btn {
+                display: flex;
+                margin-top: 1.5rem;
+                width: 100%;
+                justify-content: center;
+            }
+            .nav-wrapper {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                max-width: 350px;
+                height: 100vh;
+                background: var(--glass-bg);
+                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                transition: var(--transition);
+                z-index: 1000;
+                padding: 2rem;
+            }
+            .nav-wrapper.active {
+                right: 0;
+            }
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+                width: 100%;
+            }
+            .nav-links a {
+                font-size: 1.3rem;
+                display: block;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            section {
+                padding: 80px 5%;
+            }
+            .services {
+                padding-top: 80px;
             }
             .contact-info {
                 padding: 30px;
             }
         }
 
-        @media (max-width: 768px) {
-            header {
-                padding: 15px 5%;
-            }
-            
-            .header-controls {
-                gap: 10px;
-            }
-
-            .lang-toggle {
-                padding: 6px 10px;
-            }
-
-            .lang-toggle span {
+        @media (max-width: 480px) {
+            .logo-text {
                 display: none;
             }
-
-            .lang-toggle.ta-active span {
-                display: inline;
-                font-size: 0.8rem;
+            .header-actions {
+                gap: 0.8rem;
             }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 70%;
-                max-width: 300px;
-                height: 100vh;
-                background-color: var(--white);
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 2rem;
-                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-                transition: var(--transition);
-                z-index: 1000;
-            }
-
-            .nav-links.active {
-                right: 0;
-            }
-
-            .nav-links li {
-                width: 100%;
-                text-align: center;
-            }
-
-            .nav-links a {
-                font-size: 1.2rem;
-                display: block;
-                padding: 10px;
-            }
-            
-            .nav-links .contact-btn {
-                display: inline-flex;
-                margin-top: 1rem;
-            }
-
-            /* Hide desktop contact btn when mobile menu is active/present */
-            header > .contact-btn {
-                display: none;
-            }
-
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            section {
-                padding: 60px 5%;
-            }
-            
-            .services {
-                padding-top: 50px;
-                border-radius: 20px;
-            }
-            
-            .hero {
-                padding-top: 100px;
-            }
-            
             .hero-btns {
                 flex-direction: column;
-                gap: 0.8rem;
-                width: 100%;
-            }
-            
-            .hero-btns .btn {
-                width: 100%;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-wrapper {
-                border-radius: 20px;
-            }
-            
-            .info-card {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                gap: 10px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <a href="#" class="logo">
             <i class="fa-solid fa-tooth"></i>
-            <span data-i18n="logo_text">SRI REV DENTAL</span>
+            <span data-i18n="logoText" class="logo-text">SRI REV DENTAL CARE</span>
         </a>
         
-        <div class="header-controls">
-            <button id="langToggle" class="lang-toggle">
-                <i class="fa-solid fa-language"></i> <span id="langText">தமிழ்</span>
-            </button>
+        <nav class="nav-wrapper" id="navWrapper">
+            <ul class="nav-links">
+                <li><a href="#home" class="active" data-i18n="navHome" onclick="closeMenu()">Home</a></li>
+                <li><a href="#services" data-i18n="navServices" onclick="closeMenu()">Services</a></li>
+                <li><a href="#contact" data-i18n="navContact" onclick="closeMenu()">Contact</a></li>
+            </ul>
+            <a href="#contact" class="contact-btn mobile-only-btn" onclick="closeMenu()">
+                <i class="fa-solid fa-calendar-check"></i> <span data-i18n="btnBook">Book an Appointment</span>
+            </a>
+        </nav>
 
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <div class="header-actions">
+            <div class="lang-toggle">
+                <button class="active" onclick="setLanguage('en')">EN</button>
+                <button onclick="setLanguage('ta')">தமிழ்</button>
+            </div>
+
+            <a href="#contact" class="contact-btn desktop-contact">
+                <i class="fa-solid fa-phone"></i> 08667278466
+            </a>
+
+            <button class="mobile-menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Toggle Navigation">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
-
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home" class="active" data-i18n="nav_home">Home</a></li>
-            <li><a href="#services" data-i18n="nav_services">Services</a></li>
-            <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-            <li>
-                <a href="#contact" class="contact-btn">
-                    <i class="fa-solid fa-phone"></i> 08667278466
-                </a>
-            </li>
-        </ul>
-        
-        <a href="#contact" class="contact-btn">
-            <i class="fa-solid fa-phone"></i> 08667278466
-        </a>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <div class="badge" data-i18n="hero_badge">Premium Dental Clinic</div>
-            <h1 data-i18n="hero_title">Creating beautiful smiles for you and your family.</h1>
-            <p data-i18n="hero_desc">Welcome to SRI REV DENTAL CARE. Experience premium dental services with state-of-the-art technology in a comfortable, modern environment.</p>
+            <div class="badge" data-i18n="heroBadge">Premium Dental Clinic</div>
+            <h1 data-i18n="heroTitle">Creating beautiful smiles for you and your family.</h1>
+            <p data-i18n="heroDesc">Welcome to SRI REV DENTAL CARE. Experience premium dental services with state-of-the-art technology in a comfortable, modern environment.</p>
             <div class="hero-btns">
-                <a href="#contact" class="btn btn-primary" data-i18n="hero_btn_book">Book an Appointment</a>
-                <a href="#services" class="btn btn-outline" data-i18n="hero_btn_explore">Explore Services</a>
+                <a href="#contact" class="btn btn-primary" data-i18n="btnBook">Book an Appointment</a>
+                <a href="#services" class="btn btn-outline" data-i18n="btnExplore">Explore Services</a>
             </div>
         </div>
         <div class="hero-image-wrapper">
-            <div class="image-blob">
-                <!-- Using placehold.co for reliable preview rendering -->
-                <img src="https://placehold.co/600x600/e0fbfc/0b3954?text=Dental+Clinic" alt="Sri Rev Dental Care Clinic Reception">
+            <div class="blob-container">
+                <div class="image-blob blob-1">
+                    <img src="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sri Rev Dental Care Clinic Reception">
+                </div>
+                <div class="image-blob blob-2">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Happy Patient Smiling">
+                </div>
+                <div class="image-blob blob-3">
+                    <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dental Care Equipment">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services" class="services">
         <div class="section-title">
-            <h2 data-i18n="services_title">Our Dental Services</h2>
-            <p data-i18n="services_desc">Comprehensive dental care tailored to your specific needs, provided by experienced professionals.</p>
+            <h2 data-i18n="servicesTitle">Our Dental Services</h2>
+            <p data-i18n="servicesSubtitle">Comprehensive dental care tailored to your specific needs, provided by experienced professionals.</p>
         </div>
 
         <div class="services-grid">
@@ -802,55 +827,53 @@
                 <div class="service-icon-wrapper">
                     <i class="fa-solid fa-tooth"></i>
                 </div>
-                <h3 data-i18n="srv1_title">General Dentistry</h3>
-                <p data-i18n="srv1_desc">Routine check-ups, professional cleanings, and preventive care to keep your smile perfectly healthy.</p>
+                <h3 data-i18n="service1Title">General Dentistry</h3>
+                <p data-i18n="service1Desc">Routine check-ups, professional cleanings, and preventive care to keep your smile perfectly healthy.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon-wrapper">
                     <i class="fa-solid fa-wand-magic-sparkles"></i>
                 </div>
-                <h3 data-i18n="srv2_title">Cosmetic Dentistry</h3>
-                <p data-i18n="srv2_desc">Teeth whitening, veneers, and complete smile makeovers to boost your confidence.</p>
+                <h3 data-i18n="service2Title">Cosmetic Dentistry</h3>
+                <p data-i18n="service2Desc">Teeth whitening, veneers, and complete smile makeovers to boost your confidence.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon-wrapper">
                     <i class="fa-solid fa-teeth"></i>
                 </div>
-                <h3 data-i18n="srv3_title">Orthodontics</h3>
-                <p data-i18n="srv3_desc">Modern braces and clear aligners to straighten your teeth and improve your bite functionality.</p>
+                <h3 data-i18n="service3Title">Orthodontics</h3>
+                <p data-i18n="service3Desc">Modern braces and clear aligners to straighten your teeth and improve your bite functionality.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon-wrapper">
                     <i class="fa-solid fa-briefcase-medical"></i>
                 </div>
-                <h3 data-i18n="srv4_title">Advanced Care</h3>
-                <p data-i18n="srv4_desc">Expert tooth extractions, dental implants, and advanced surgical procedures in a safe environment.</p>
+                <h3 data-i18n="service4Title">Advanced Care</h3>
+                <p data-i18n="service4Desc">Expert tooth extractions, dental implants, and advanced surgical procedures in a safe environment.</p>
             </div>
         </div>
 
         <div class="services-banner">
             <div class="services-banner-img">
-                <!-- Using placehold.co for reliable preview rendering -->
-                <img src="https://placehold.co/800x600/0b3954/ffffff?text=Healthy+Smiles" alt="Healthy white teeth smiling">
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Healthy white teeth smiling">
             </div>
             <div class="services-banner-content">
-                <h3 data-i18n="banner_title">Why Choose Sri Rev Dental Care?</h3>
+                <h3 data-i18n="whyChooseTitle">Why Choose Sri Rev Dental Care?</h3>
                 <ul>
-                    <li><i class="fa-solid fa-check-circle"></i> <span data-i18n="banner_li1">Highly Experienced Professionals</span></li>
-                    <li><i class="fa-solid fa-check-circle"></i> <span data-i18n="banner_li2">State-of-the-art Dental Technology</span></li>
-                    <li><i class="fa-solid fa-check-circle"></i> <span data-i18n="banner_li3">Relaxing & Comfortable Environment</span></li>
-                    <li><i class="fa-solid fa-check-circle"></i> <span data-i18n="banner_li4">Strict Sterilization Protocols</span></li>
-                    <li><i class="fa-solid fa-check-circle"></i> <span data-i18n="banner_li5">Personalized Treatment Plans</span></li>
+                    <li><i class="fa-solid fa-check-circle"></i> <span data-i18n="why1">Highly Experienced Professionals</span></li>
+                    <li><i class="fa-solid fa-check-circle"></i> <span data-i18n="why2">State-of-the-art Dental Technology</span></li>
+                    <li><i class="fa-solid fa-check-circle"></i> <span data-i18n="why3">Relaxing & Comfortable Environment</span></li>
+                    <li><i class="fa-solid fa-check-circle"></i> <span data-i18n="why4">Strict Sterilization Protocols</span></li>
+                    <li><i class="fa-solid fa-check-circle"></i> <span data-i18n="why5">Personalized Treatment Plans</span></li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Contact & Map Section -->
     <section id="contact" class="contact">
         <div class="section-title">
-            <h2 data-i18n="contact_title">Visit Our Clinic</h2>
-            <p data-i18n="contact_desc">We are conveniently located in Velur to serve you better. Reach out to schedule your visit.</p>
+            <h2 data-i18n="contactTitle">Visit Our Clinic</h2>
+            <p data-i18n="contactSubtitle">We are conveniently located in Velur to serve you better. Reach out to schedule your visit.</p>
         </div>
 
         <div class="contact-wrapper">
@@ -860,8 +883,8 @@
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
                     <div>
-                        <h3 data-i18n="loc_title">Location</h3>
-                        <p data-i18n="loc_desc">mani complex 4 roads, near BSNL exchange office,<br>Velur, Tamil Nadu 638182</p>
+                        <h3 data-i18n="locationTitle">Location</h3>
+                        <p data-i18n="locationAddress">Mani Complex 4 Roads, near BSNL exchange office,<br>Velur, Tamil Nadu 638182</p>
                     </div>
                 </div>
                 
@@ -870,7 +893,7 @@
                         <i class="fa-solid fa-phone"></i>
                     </div>
                     <div>
-                        <h3 data-i18n="call_title">Call Us</h3>
+                        <h3 data-i18n="callTitle">Call Us</h3>
                         <p><a href="tel:08667278466">08667278466</a></p>
                     </div>
                 </div>
@@ -880,129 +903,34 @@
                         <i class="fa-solid fa-clock"></i>
                     </div>
                     <div>
-                        <h3 data-i18n="time_title">Working Hours</h3>
-                        <p data-i18n="time_desc">Monday - Saturday: 9:00 AM - 8:00 PM<br>Sunday: 9:00 AM - 1:00 PM</p>
+                        <h3 data-i18n="hoursTitle">Working Hours</h3>
+                        <p data-i18n="hoursText">Monday - Saturday: 9:00 AM - 8:00 PM<br>Sunday: 9:00 AM - 1:00 PM</p>
                     </div>
                 </div>
             </div>
             
             <div class="map-container">
-                <iframe src="https://maps.google.com/maps?q=11.1078516,78.0034028&hl=en&z=15&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://maps.google.com/maps?q=11.1078516,78.0034028&hl=en&z=15&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Sri Rev Dental Care Location"></iframe>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p data-i18n="footer_text">&copy; 2026 SRI REV DENTAL CARE. All Rights Reserved.</p>
+        <p>&copy; 2026 SRI REV DENTAL CARE. All Rights Reserved.</p>
     </footer>
 
     <script>
-        // Language Dictionary mapping keys to English and Tamil content
-        const translations = {
-            "logo_text": { en: "SRI REV DENTAL", ta: "ஸ்ரீ ரேவ் டெண்டல்" },
-            "nav_home": { en: "Home", ta: "முகப்பு" },
-            "nav_services": { en: "Services", ta: "சேவைகள்" },
-            "nav_contact": { en: "Contact", ta: "தொடர்பு" },
-            "hero_badge": { en: "Premium Dental Clinic", ta: "சிறந்த பல் மருத்துவமனை" },
-            "hero_title": { en: "Creating beautiful smiles for you and your family.", ta: "உங்கள் குடும்பத்தின் அழகான புன்னகைக்கு உத்தரவாதம்." },
-            "hero_desc": { en: "Welcome to SRI REV DENTAL CARE. Experience premium dental services with state-of-the-art technology in a comfortable, modern environment.", ta: "ஸ்ரீ ரேவ் பல் மருத்துவமனைக்கு வரவேற்கிறோம். நவீன தொழில்நுட்பத்துடன் பாதுகாப்பான சூழலில் சிறந்த பல் மருத்துவ சேவைகளை பெற்றிடுங்கள்." },
-            "hero_btn_book": { en: "Book an Appointment", ta: "முன்பதிவு செய்ய" },
-            "hero_btn_explore": { en: "Explore Services", ta: "சேவைகளை காண" },
-            "services_title": { en: "Our Dental Services", ta: "எங்கள் மருத்துவ சேவைகள்" },
-            "services_desc": { en: "Comprehensive dental care tailored to your specific needs, provided by experienced professionals.", ta: "அனுபவமிக்க மருத்துவர்களால் உங்கள் தேவைகளுக்கு ஏற்ப விரிவான பல் மருத்துவ சேவைகள் வழங்கப்படுகிறது." },
-            "srv1_title": { en: "General Dentistry", ta: "பொது பல் மருத்துவம்" },
-            "srv1_desc": { en: "Routine check-ups, professional cleanings, and preventive care to keep your smile perfectly healthy.", ta: "வழக்கமான பரிசோதனைகள், பற்களை சுத்தம் செய்தல் மற்றும் உங்கள் பற்களை ஆரோக்கியமாக வைத்திருக்க தடுப்பு முறைகள்." },
-            "srv2_title": { en: "Cosmetic Dentistry", ta: "அழகு பல் மருத்துவம்" },
-            "srv2_desc": { en: "Teeth whitening, veneers, and complete smile makeovers to boost your confidence.", ta: "பற்களை வெண்மையாக்குதல் மற்றும் உங்கள் நம்பிக்கையை அதிகரிக்கும் வகையிலான புன்னகை மேம்பாட்டு சிகிச்சைகள்." },
-            "srv3_title": { en: "Orthodontics", ta: "பல் சீரமைப்பு" },
-            "srv3_desc": { en: "Modern braces and clear aligners to straighten your teeth and improve your bite functionality.", ta: "கோணலான பற்களை சீரமைக்க நவீன கிளிப்புகள் மற்றும் அலைனர்கள்." },
-            "srv4_title": { en: "Advanced Care", ta: "மேம்பட்ட சிகிச்சைகள்" },
-            "srv4_desc": { en: "Expert tooth extractions, dental implants, and advanced surgical procedures in a safe environment.", ta: "பல் எடுத்தல், செயற்கை பல் பொருத்துதல் மற்றும் பாதுகாப்பான சூழலில் மேம்பட்ட அறுவை சிகிச்சைகள்." },
-            "banner_title": { en: "Why Choose Sri Rev Dental Care?", ta: "ஸ்ரீ ரேவ் மருத்துவமனையை ஏன் தேர்ந்தெடுக்க வேண்டும்?" },
-            "banner_li1": { en: "Highly Experienced Professionals", ta: "அனுபவம் வாய்ந்த மருத்துவர்கள்" },
-            "banner_li2": { en: "State-of-the-art Dental Technology", ta: "அதிநவீன மருத்துவ தொழில்நுட்பம்" },
-            "banner_li3": { en: "Relaxing & Comfortable Environment", ta: "அமைதியான மற்றும் வசதியான சூழல்" },
-            "banner_li4": { en: "Strict Sterilization Protocols", ta: "கடுமையான கிருமி நீக்க நடைமுறைகள்" },
-            "banner_li5": { en: "Personalized Treatment Plans", ta: "தனிப்பட்ட சிகிச்சை முறைகள்" },
-            "contact_title": { en: "Visit Our Clinic", ta: "எங்கள் மருத்துவமனைக்கு வருகை தரவும்" },
-            "contact_desc": { en: "We are conveniently located in Velur to serve you better. Reach out to schedule your visit.", ta: "உங்களுக்கு சிறந்த சேவை வழங்க வேலூரில் அமைந்துள்ளோம். உங்கள் வருகையை முன்பதிவு செய்ய தொடர்பு கொள்ளவும்." },
-            "loc_title": { en: "Location", ta: "இடம்" },
-            "loc_desc": { en: "mani complex 4 roads, near BSNL exchange office,<br>Velur, Tamil Nadu 638182", ta: "மணி காம்ப்ளக்ஸ் 4 ரோடு, BSNL அலுவலகம் அருகில்,<br>வேலூர், தமிழ்நாடு 638182" },
-            "call_title": { en: "Call Us", ta: "அழைக்க" },
-            "time_title": { en: "Working Hours", ta: "வேலை நேரங்கள்" },
-            "time_desc": { en: "Monday - Saturday: 9:00 AM - 8:00 PM<br>Sunday: 9:00 AM - 1:00 PM", ta: "திங்கள் - சனி: காலை 9:00 - இரவு 8:00<br>ஞாயிறு:  காலை 9:00 -  மதியம் 1:00 மணி" },
-            "footer_text": { en: "&copy; 2026 SRI REV DENTAL CARE. All Rights Reserved.", ta: "&copy; 2026 ஸ்ரீ ரேவ் பல் மருத்துவமனை. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை." }
-        };
-
-        // Initialize Language Logic
-        let currentLang = 'en';
-        const langToggleBtn = document.getElementById('langToggle');
-        const langText = document.getElementById('langText');
-
-        langToggleBtn.addEventListener('click', () => {
-            // Swap Language
-            currentLang = currentLang === 'en' ? 'ta' : 'en';
-            
-            // Update button label visually
-            langText.textContent = currentLang === 'en' ? 'தமிழ்' : 'English';
-            
-            // Toggle body class for font styling adjustments
-            if(currentLang === 'ta') {
-                document.body.classList.add('ta-active');
-                langToggleBtn.classList.add('ta-active');
-            } else {
-                document.body.classList.remove('ta-active');
-                langToggleBtn.classList.remove('ta-active');
-            }
-
-            // Loop through all data-i18n tags and inject translation
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                if (translations[key]) {
-                    element.innerHTML = translations[key][currentLang];
-                }
-            });
-        });
-
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                
-                // Close mobile menu if open
-                const navLinksContainer = document.getElementById('navLinks');
-                const menuBtnIcon = document.querySelector('#mobileMenuBtn i');
-                if(navLinksContainer.classList.contains('active')) {
-                    navLinksContainer.classList.remove('active');
-                    menuBtnIcon.classList.remove('fa-xmark');
-                    menuBtnIcon.classList.add('fa-bars');
-                }
-
                 if (target) {
                     target.scrollIntoView({
                         behavior: 'smooth'
                     });
                 }
             });
-        });
-
-        // Mobile Menu Toggle Logic
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinksContainer = document.getElementById('navLinks');
-        const menuBtnIcon = mobileMenuBtn.querySelector('i');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinksContainer.classList.toggle('active');
-            
-            if (navLinksContainer.classList.contains('active')) {
-                menuBtnIcon.classList.remove('fa-bars');
-                menuBtnIcon.classList.add('fa-xmark');
-            } else {
-                menuBtnIcon.classList.remove('fa-xmark');
-                menuBtnIcon.classList.add('fa-bars');
-            }
         });
 
         // Active navigation link update on scroll
@@ -1025,6 +953,126 @@
                 }
             });
         });
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.getElementById('navWrapper');
+            const menuBtnIcon = document.querySelector('#menuBtn i');
+            
+            nav.classList.toggle('active');
+            
+            if (nav.classList.contains('active')) {
+                menuBtnIcon.classList.remove('fa-bars');
+                menuBtnIcon.classList.add('fa-xmark');
+            } else {
+                menuBtnIcon.classList.remove('fa-xmark');
+                menuBtnIcon.classList.add('fa-bars');
+            }
+        }
+
+        function closeMenu() {
+            const nav = document.getElementById('navWrapper');
+            const menuBtnIcon = document.querySelector('#menuBtn i');
+            
+            nav.classList.remove('active');
+            menuBtnIcon.classList.remove('fa-xmark');
+            menuBtnIcon.classList.add('fa-bars');
+        }
+
+        // Translation Dictionary (English and Tamil)
+        const translations = {
+            en: {
+                logoText: "SRI REV DENTAL CARE",
+                navHome: "Home",
+                navServices: "Services",
+                navContact: "Contact",
+                heroBadge: "Premium Dental Clinic",
+                heroTitle: "Creating beautiful smiles for you and your family.",
+                heroDesc: "Welcome to SRI REV DENTAL CARE. Experience premium dental services with state-of-the-art technology in a comfortable, modern environment.",
+                btnBook: "Book an Appointment",
+                btnExplore: "Explore Services",
+                servicesTitle: "Our Dental Services",
+                servicesSubtitle: "Comprehensive dental care tailored to your specific needs, provided by experienced professionals.",
+                service1Title: "General Dentistry",
+                service1Desc: "Routine check-ups, professional cleanings, and preventive care to keep your smile perfectly healthy.",
+                service2Title: "Cosmetic Dentistry",
+                service2Desc: "Teeth whitening, veneers, and complete smile makeovers to boost your confidence.",
+                service3Title: "Orthodontics",
+                service3Desc: "Modern braces and clear aligners to straighten your teeth and improve your bite functionality.",
+                service4Title: "Advanced Care",
+                service4Desc: "Expert tooth extractions, dental implants, and advanced surgical procedures in a safe environment.",
+                whyChooseTitle: "Why Choose Sri Rev Dental Care?",
+                why1: "Highly Experienced Professionals",
+                why2: "State-of-the-art Dental Technology",
+                why3: "Relaxing & Comfortable Environment",
+                why4: "Strict Sterilization Protocols",
+                why5: "Personalized Treatment Plans",
+                contactTitle: "Visit Our Clinic",
+                contactSubtitle: "We are conveniently located in Velur to serve you better. Reach out to schedule your visit.",
+                locationTitle: "Location",
+                locationAddress: "Mani Complex 4 Roads, near BSNL exchange office,<br>Velur, Tamil Nadu 638182",
+                callTitle: "Call Us",
+                hoursTitle: "Working Hours",
+                hoursText: "Monday - Saturday: 9:00 AM - 8:00 PM<br>Sunday: 9:00 AM - 1:00 PM"
+            },
+            ta: {
+                logoText: "ஸ்ரீ ரேவ் பல் மருத்துவமனை",
+                navHome: "முகப்பு",
+                navServices: "சேவைகள்",
+                navContact: "தொடர்பு",
+                heroBadge: "சிறந்த பல் மருத்துவமனை",
+                heroTitle: "உங்களுக்கும் உங்கள் குடும்பத்திற்கும் அழகான புன்னகையை உருவாக்குகிறோம்.",
+                heroDesc: "ஸ்ரீ ரேவ் பல் மருத்துவமனைக்கு உங்களை வரவேற்கிறோம். நவீன தொழில்நுட்பத்துடன் கூடிய சிறந்த பல் மருத்துவ சேவைகளை வசதியான சூழலில் பெறுங்கள்.",
+                btnBook: "முன்பதிவு செய்ய",
+                btnExplore: "சேவைகளை காண்க",
+                servicesTitle: "எங்கள் பல் மருத்துவ சேவைகள்",
+                servicesSubtitle: "உங்கள் குறிப்பிட்ட தேவைகளுக்கு ஏற்ப விரிவான பல் மருத்துவ பராமரிப்பு, அனுபவமிக்க மருத்துவர்களால் வழங்கப்படுகிறது.",
+                service1Title: "பொது பல் மருத்துவம்",
+                service1Desc: "உங்கள் புன்னகையை ஆரோக்கியமாக வைத்திருக்க வழக்கமான பரிசோதனைகள், சுத்தம் செய்தல் மற்றும் தடுப்பு பராமரிப்பு.",
+                service2Title: "அழகு பல் மருத்துவம்",
+                service2Desc: "பற்களை வெண்மையாக்குதல், வெனியர்ஸ் மற்றும் உங்கள் நம்பிக்கையை அதிகரிக்க முழுமையான புன்னகை மாற்றங்கள்.",
+                service3Title: "பல் சீரமைப்பு",
+                service3Desc: "பற்களை சீரமைக்க மற்றும் உங்கள் கடிக்கும் திறனை மேம்படுத்த நவீன பிரேஸ்கள் மற்றும் அலைனர்கள்.",
+                service4Title: "மேம்பட்ட பராமரிப்பு",
+                service4Desc: "பாதுகாப்பான சூழலில் பல் எடுத்தல், பல் உள்வைப்புகள் (இம்பிளான்ட்ஸ்) மற்றும் மேம்பட்ட அறுவை சிகிச்சைகள்.",
+                whyChooseTitle: "ஏன் ஸ்ரீ ரேவ் பல் மருத்துவமனையை தேர்ந்தெடுக்க வேண்டும்?",
+                why1: "அதிக அனுபவம் வாய்ந்த மருத்துவர்கள்",
+                why2: "நவீன பல் மருத்துவ தொழில்நுட்பம்",
+                why3: "நிதானமான மற்றும் வசதியான சூழல்",
+                why4: "கடுமையான ஸ்டெரிலைசேஷன் நெறிமுறைகள்",
+                why5: "தனிப்பயனாக்கப்பட்ட சிகிச்சை திட்டங்கள்",
+                contactTitle: "எங்கள் மருத்துவமனைக்கு வாருங்கள்",
+                contactSubtitle: "உங்களுக்கு சிறப்பாக சேவை செய்ய நாங்கள் வேலூரில் வசதியாக அமைந்துள்ளோம். உங்கள் வருகையை திட்டமிட தொடர்பு கொள்ளவும்.",
+                locationTitle: "இடம்",
+                locationAddress: "மணி காம்ப்ளக்ஸ் 4 ரோடு, BSNL அலுவலகம் அருகில்,<br>வேலூர், தமிழ்நாடு 638182",
+                callTitle: "அழைக்க",
+                hoursTitle: "வேலை நேரம்",
+                hoursText: "திங்கள் - சனி: 9:00 AM - 8:00 PM<br>ஞாயிறு: 9:00 AM - 1:00 PM"
+            }
+        };
+
+        function setLanguage(lang) {
+            // Update active button state
+            document.querySelectorAll('.lang-toggle button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Apply Tamil specific font class to the body
+            if (lang === 'ta') {
+                document.body.classList.add('lang-ta');
+            } else {
+                document.body.classList.remove('lang-ta');
+            }
+
+            // Update text content
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+        }
     </script>
 </body>
 </html>
